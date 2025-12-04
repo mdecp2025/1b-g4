@@ -1,0 +1,18 @@
+import brython_robot as robot
+from browser import timer
+w = robot.World(10, 10)
+r = robot.AnimatedRobot(w, 1, 1)
+def turn_right():
+ r.turn_left()
+ r.turn_left()
+ r.turn_left()
+for i in range(5):
+    r.move(9)
+    r.turn_left()
+    r.move(1)
+    r.turn_left()
+    r.move(9)
+    turn_right()
+    r.move(1)
+    turn_right()
+    r.move(9)
